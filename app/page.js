@@ -593,7 +593,7 @@ function VerticalVideos() {
               cclassName="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30"
             >
               <video
-                className="h-[440px] md:h-[500px] w-full object-cover"
+                className="h-[440px] md:h-[500px] w-full object-cover rounded-[2rem]"
                 src={item.src}
                 autoPlay
                 muted
