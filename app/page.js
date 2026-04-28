@@ -28,24 +28,24 @@ const companies = [
     title: "Los Lobos",
     subtitle: "Agroindustria bananera",
     text: "Producción agrícola enfocada en calidad, eficiencia operativa y crecimiento sostenible.",
-    image: "/media/banano.png",
-    logo: "/media/los-lobos-logo.png",
+    image: "/media/.webpbanano",
+    logo: "/media/los-lobos-logo.webp",
     icon: Leaf,
   },
   {
     title: "Constructora",
     subtitle: "Infraestructura y desarrollo",
     text: "Área en desarrollo para proyectos de construcción, maquinaria, obras civiles e infraestructura.",
-    image: "/media/construccion.png",
-    logo: "/media/constructora-logo.png",
+    image: "/media/.webpconstruccion",
+    logo: "/media/constructora-logo.webp",
     icon: HardHat,
   },
   {
     title: "Futuros proyectos",
     subtitle: "Energía y servicios",
     text: "Expansión hacia nuevos sectores estratégicos como estaciones de servicio, logística y desarrollo comercial.",
-    image: "/media/maquinaria.png",
-    logo: "/media/futuros-logo.png",
+    image: "/media/maquinaria.webp",
+    logo: "/media/futuros-logo.webp",
     icon: Fuel,
   },
 ];
@@ -62,10 +62,10 @@ const horizontalVideos = [
 ];
 
 const gallery = [
-  "/media/galeria1.png",
-  "/media/galeria2.png",
-  "/media/galeria3.png",
-  "/media/galeria4.png",
+  "/media/galeria1.webp",
+  "/media/galeria2.webp",
+  "/media/galeria3.webp",
+  "/media/galeria4.webp",
 ];
 
 const metrics = [
@@ -164,7 +164,7 @@ function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="#" className="flex items-center gap-3">
           <img
-            src="/media/bp-logo.png"
+            src="/media/bp-logo.webp"
             alt="BP Group"
             className="h-12 w-auto object-contain"
           />
@@ -346,7 +346,7 @@ function About() {
       >
         <div className="absolute -inset-4 rounded-[2.5rem] bg-[#c9a24d]/10 blur-3xl" />
         <img
-          src="/media/equipo.png"
+          src="/media/equipo.webp"
           alt="Equipo BP Group"
           className="relative h-[560px] w-full rounded-[2rem] border border-white/10 object-cover shadow-2xl shadow-black/40"
         />
@@ -649,7 +649,7 @@ function VisualStory() {
     <section className="relative min-h-screen overflow-hidden px-6 py-32">
       <div className="absolute inset-0">
         <img
-          src="/media/maquinaria.png"
+          src="/media/maquinaria.webp"
           alt="Maquinaria"
           className="h-full w-full object-cover"
         />
