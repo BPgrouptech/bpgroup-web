@@ -582,7 +582,7 @@ function VerticalVideos() {
           </h2>
         </div>
 
-        <div className="grid gap-8 md:gap-10 grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:gap-12">
           {verticalVideos.map((item, index) => (
             <motion.div
               key={item.src}
@@ -590,10 +590,10 @@ function VerticalVideos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12 }}
-              className="relative min-w-[270px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30 md:min-w-[340px]"
+              cclassName="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30"
             >
               <video
-                className="h-[580px] w-full object-cover"
+                className="h-[440px] md:h-[500px] w-full object-cover"
                 src={item.src}
                 autoPlay
                 muted
