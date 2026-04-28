@@ -14,11 +14,15 @@ const geistMono = Geist_Mono({
 // 🔥 METADATA UNIFICADO (solo uno)
 export const metadata = {
   metadataBase: new URL("https://bpgroup.mx"),
+  title: "BP Group Holding",
+  description: "Desarrollo, Agroindustria e Infraestructura",
 
-  title: {
-    default: "BP Group Holding",
-    template: "%s | BP Group",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
+};
 
   description:
     "Grupo empresarial enfocado en agroindustria, infraestructura, construcción, desarrollo e inversión.",
