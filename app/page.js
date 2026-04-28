@@ -30,7 +30,7 @@ const companies = [
     text: "Producción agrícola enfocada en calidad, eficiencia operativa y crecimiento sostenible.",
     image: "/media/banano.webp",
     //*logo: "/media/los-lobos-logo.webp",
-    icon: Leaf,
+    //*icon: Leaf,
   },
   {
     title: "BP Costruye",
@@ -38,7 +38,7 @@ const companies = [
     text: "Área en desarrollo para proyectos de construcción, maquinaria, obras civiles e infraestructura.",
     image: "/media/maquinaria.webp",
     //*logo: "/media/constructora-logo.webp",
-    icon: HardHat, 
+    //*icon: HardHat, 
   },
   {
     title: "Futuros proyectos",
@@ -46,7 +46,7 @@ const companies = [
     text: "Expansión hacia nuevos sectores estratégicos como estaciones de servicio, logística y desarrollo comercial.",
     image: "/media/construccion.webp",
     //*logo: "/media/futuros-logo.webp",
-    icon: Fuel,
+    //*icon: Fuel,
   },
 ];
 
