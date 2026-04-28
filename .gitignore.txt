@@ -1,0 +1,11 @@
+node_modules
+.next
+.env
+.env.local
+
+# Archivos pesados
+*.zip
+*.mov
+
+# Carpeta de wetransfer (tu error)
+public/media/wetransfer*
