@@ -415,13 +415,6 @@ function Companies() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-                  <div className="absolute left-5 top-5 rounded-2xl bg-black/45 p-3 backdrop-blur-md">
-                    <img
-                      src={item.logo}
-                      alt={item.title}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
 
                   <div className="absolute bottom-5 left-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#c9a24d] text-black">
                     <Icon />
