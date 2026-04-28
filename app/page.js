@@ -29,7 +29,6 @@ const companies = [
     subtitle: "Agroindustria bananera",
     text: "Producción agrícola enfocada en calidad, eficiencia operativa y crecimiento sostenible.",
     image: "/media/banano.webp",
-    logo: "/media/los-lobos-logo.webp",
     icon: Leaf,
   },
   {
@@ -37,7 +36,6 @@ const companies = [
     subtitle: "Infraestructura y desarrollo",
     text: "Área en desarrollo para proyectos de construcción, maquinaria, obras civiles e infraestructura.",
     image: "/media/maquinaria.webp",
-    logo: "/media/constructora-logo.webp",
     icon: HardHat, 
   },
   {
@@ -45,7 +43,6 @@ const companies = [
     subtitle: "Energía y servicios",
     text: "Expansión hacia nuevos sectores estratégicos como estaciones de servicio, logística y desarrollo comercial.",
     image: "/media/construccion.webp",
-    logo: "/media/futuros-logo.webp",
     icon: Fuel,
   },
 ];
@@ -373,25 +370,6 @@ function Companies() {
           <p className="max-w-md text-white/55">
             Un portafolio empresarial con presencia en producción, desarrollo e inversión.
           </p>
-        </div>
-
-        <div className="mb-14 grid gap-5 sm:grid-cols-3">
-          {companies.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.12 }}
-              className="flex min-h-40 items-center justify-center rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 hover:bg-white/[0.07] transition"
-            >
-              <img
-                src={item.logo}
-                alt={item.title}
-                className="max-h-24 w-auto object-contain"
-              />
-            </motion.div>
-          ))}
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
