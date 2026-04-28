@@ -29,7 +29,7 @@ const companies = [
     subtitle: "Agroindustria bananera",
     text: "Producción agrícola enfocada en calidad, eficiencia operativa y crecimiento sostenible.",
     image: "/media/banano.webp",
-    logo: "/media/los-lobos-logo.webp",
+    //*logo: "/media/los-lobos-logo.webp",
     icon: Leaf,
   },
   {
@@ -37,7 +37,7 @@ const companies = [
     subtitle: "Infraestructura y desarrollo",
     text: "Área en desarrollo para proyectos de construcción, maquinaria, obras civiles e infraestructura.",
     image: "/media/maquinaria.webp",
-    logo: "/media/constructora-logo.webp",
+    //*logo: "/media/constructora-logo.webp",
     icon: HardHat, 
   },
   {
@@ -45,7 +45,7 @@ const companies = [
     subtitle: "Energía y servicios",
     text: "Expansión hacia nuevos sectores estratégicos como estaciones de servicio, logística y desarrollo comercial.",
     image: "/media/construccion.webp",
-    logo: "/media/futuros-logo.webp",
+    //*logo: "/media/futuros-logo.webp",
     icon: Fuel,
   },
 ];
