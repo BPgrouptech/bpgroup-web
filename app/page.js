@@ -590,10 +590,10 @@ function VerticalVideos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12 }}
-              cclassName="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30"
+              className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30"
             >
               <video
-                className="h-[440px] md:h-[500px] w-full object-cover rounded-[2rem]"
+                className="h-[440px] md:h-[500px] w-full object-cover"
                 src={item.src}
                 autoPlay
                 muted
@@ -602,11 +602,15 @@ function VerticalVideos() {
                 preload="none"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              {/* overlay oscuro */}
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
 
-              <div className="absolute bottom-6 left-6 right-6">
+              {/* texto */}
+              <div className="absolute bottom-6 left-6 right-6 z-20">
                 <p className="text-sm text-[#c9a24d]">{item.text}</p>
-                <h3 className="mt-1 text-3xl font-black">{item.title}</h3>
+                <h3 className="mt-1 text-3xl font-black text-white">
+                  {item.title}
+                </h3>
               </div>
             </motion.div>
           ))}
@@ -615,7 +619,6 @@ function VerticalVideos() {
     </section>
   );
 }
-
 function VisualStory() {
   return (
     <section className="relative min-h-screen overflow-hidden px-6 py-32">
