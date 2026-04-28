@@ -498,7 +498,7 @@ function Capabilities() {
 
 function GroupStructure() {
   return (
-    <section className="px-6 py-24">
+    <section className="px-6 md:px-10 xl:px-16 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 max-w-4xl">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#c9a24d]">
@@ -611,7 +611,7 @@ function VerticalVideos() {
           </h2>
         </div>
 
-        <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
+        <div className="grid gap-8 md:gap-10 grid-cols-2 md:grid-cols-4">
           {verticalVideos.map((item, index) => (
             <motion.div
               key={item.src}
