@@ -13,8 +13,58 @@ const geistMono = Geist_Mono({
 
 // 🔥 METADATA UNIFICADO (solo uno)
 export const metadata = {
-  title: "BP Group Holding",
-  description: "Desarrollo, Agroindustria e Infraestructura",
+  metadataBase: new URL("https://bpgroup.mx"),
+
+  title: {
+    default: "BP Group Holding",
+    template: "%s | BP Group",
+  },
+
+  description:
+    "Grupo empresarial enfocado en agroindustria, infraestructura, construcción, desarrollo e inversión.",
+
+  keywords: [
+    "BP Group",
+    "BP Group Holding",
+    "Los Lobos",
+    "agroindustria",
+    "banano",
+    "constructora",
+    "infraestructura",
+    "desarrollo empresarial",
+    "Ecuador",
+    "México",
+  ],
+
+  authors: [{ name: "BP Group" }],
+  creator: "BP Group",
+  publisher: "BP Group",
+
+  openGraph: {
+    title: "BP Group Holding",
+    description:
+      "Agroindustria, infraestructura, construcción, desarrollo e inversión.",
+    url: "https://bpgroup.mx",
+    siteName: "BP Group",
+    images: [
+      {
+        url: "/media/preview-bpgroup.png",
+        width: 1200,
+        height: 630,
+        alt: "BP Group Holding",
+      },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "BP Group Holding",
+    description:
+      "Grupo empresarial enfocado en agroindustria, infraestructura y desarrollo.",
+    images: ["/media/preview-bpgroup.png"],
+  },
 
   icons: {
     icon: "/media/bp-logo.png",
