@@ -15,6 +15,12 @@ import {
   MapPin,
   Factory,
   Sprout,
+  Tractor,
+  ShieldCheck,
+  LineChart,
+  BriefcaseBusiness,
+  Layers3,
+  Wrench,
 } from "lucide-react";
 
 const companies = [
@@ -68,6 +74,56 @@ const metrics = [
   { value: "360°", label: "Visión empresarial", icon: MapPin },
 ];
 
+const capabilities = [
+  {
+    title: "Gestión agroindustrial",
+    text: "Operación agrícola, control productivo, planificación de campo y mejora continua.",
+    icon: Tractor,
+  },
+  {
+    title: "Infraestructura y construcción",
+    text: "Desarrollo de proyectos, maquinaria, obra civil e infraestructura operativa.",
+    icon: HardHat,
+  },
+  {
+    title: "Administración de activos",
+    text: "Control de vehículos, maquinaria, equipos, propiedades y recursos estratégicos.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Expansión empresarial",
+    text: "Evaluación de oportunidades, nuevos sectores, inversión y crecimiento ordenado.",
+    icon: LineChart,
+  },
+];
+
+const structure = [
+  {
+    name: "BP Group",
+    role: "Holding empresarial",
+    text: "Dirección estratégica, inversión, administración y desarrollo corporativo.",
+    icon: BriefcaseBusiness,
+  },
+  {
+    name: "Los Lobos",
+    role: "Agroindustria bananera",
+    text: "Producción agrícola, operación de campo y crecimiento agroindustrial.",
+    icon: Leaf,
+  },
+  {
+    name: "Constructora",
+    role: "Infraestructura y desarrollo",
+    text: "Proyectos de construcción, maquinaria y obras civiles.",
+    icon: Wrench,
+  },
+  {
+    name: "Futuros proyectos",
+    role: "Energía, servicios e inversión",
+    text: "Nuevas oportunidades en sectores estratégicos.",
+    icon: Layers3,
+  },
+];
+
 export default function Home() {
   return (
     <main className="bg-[#070b12] text-white overflow-hidden">
@@ -76,6 +132,8 @@ export default function Home() {
       <Metrics />
       <About />
       <Companies />
+      <Capabilities />
+      <GroupStructure />
       <VideoShowcase />
       <VerticalVideos />
       <VisualStory />
@@ -377,6 +435,118 @@ function Companies() {
               </motion.div>
             );
           })}
+        </div>
+      </div>
+    </section>
+  );
+}
+function Capabilities() {
+  return (
+    <section className="relative px-6 py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(201,162,77,0.12),transparent_35%)]" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#c9a24d]">
+              Capacidades
+            </p>
+            <h2 className="text-4xl font-black leading-tight md:text-7xl">
+              Operación, control y crecimiento.
+            </h2>
+          </div>
+
+          <p className="max-w-md text-white/55">
+            BP Group combina operación real, administración de activos y visión de expansión
+            para fortalecer cada empresa del grupo.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-4">
+          {capabilities.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-2xl shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:border-[#c9a24d]/40 hover:bg-white/[0.07]"
+              >
+                <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#c9a24d] text-black shadow-lg shadow-[#c9a24d]/20">
+                  <Icon size={26} />
+                </div>
+
+                <h3 className="text-xl font-bold">{item.title}</h3>
+
+                <p className="mt-4 text-sm leading-7 text-white/55">
+                  {item.text}
+                </p>
+
+                <div className="mt-8 h-px w-full bg-gradient-to-r from-[#c9a24d]/70 to-transparent" />
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GroupStructure() {
+  return (
+    <section className="px-6 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-14 max-w-4xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#c9a24d]">
+            Estructura
+          </p>
+          <h2 className="text-4xl font-black leading-tight md:text-7xl">
+            Un grupo, múltiples líneas de crecimiento.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/60">
+            BP Group articula empresas y proyectos bajo una misma visión estratégica:
+            operar mejor, crecer con orden y construir valor a largo plazo.
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-[#c9a24d] via-white/20 to-transparent md:block" />
+
+          <div className="grid gap-5">
+            {structure.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: -35 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.12 }}
+                  className="relative grid gap-5 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/20 md:grid-cols-[120px_1fr] md:items-center md:pl-16"
+                >
+                  <div className="absolute -left-1 top-8 hidden h-4 w-4 rounded-full bg-[#c9a24d] shadow-lg shadow-[#c9a24d]/40 md:block" />
+
+                  <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-black/30 text-[#c9a24d] ring-1 ring-white/10">
+                    <Icon size={34} />
+                  </div>
+
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.25em] text-[#c9a24d]">
+                      {item.role}
+                    </p>
+                    <h3 className="mt-2 text-3xl font-black">{item.name}</h3>
+                    <p className="mt-3 max-w-3xl leading-7 text-white/55">
+                      {item.text}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
