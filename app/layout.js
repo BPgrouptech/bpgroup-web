@@ -67,10 +67,12 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/media/bp-logo.png",
-    shortcut: "/media/bp-logo.png",
-    apple: "/media/bp-logo.png",
-  },
+  icon: [
+    { url: "/media/bp-logo.png", type: "image/png" },
+  ],
+  shortcut: "/media/bp-logo.png",
+  apple: "/media/bp-logo.png",
+},
 };
 
 export default function RootLayout({ children }) {
