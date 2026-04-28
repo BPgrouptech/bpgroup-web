@@ -33,7 +33,7 @@ const companies = [
     icon: Leaf,
   },
   {
-    title: "Constructora",
+    title: "BP Costruye",
     subtitle: "Infraestructura y desarrollo",
     text: "Área en desarrollo para proyectos de construcción, maquinaria, obras civiles e infraestructura.",
     image: "/media/construccion.webp",
