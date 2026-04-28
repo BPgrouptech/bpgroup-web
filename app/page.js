@@ -112,7 +112,7 @@ const structure = [
     icon: Leaf,
   },
   {
-    name: "Constructora",
+    name: "BP Construye",
     role: "Infraestructura y desarrollo",
     text: "Proyectos de construcción, maquinaria y obras civiles.",
     icon: Wrench,
