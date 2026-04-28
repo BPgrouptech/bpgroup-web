@@ -388,9 +388,6 @@ function VideoShowcase() {
     <section id="videos" className="px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-4xl">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#c9a24d]">
-            Videos institucionales
-          </p>
           <h2 className="text-4xl font-black leading-tight md:text-7xl">
             Movimiento, escala y presencia.
           </h2>
@@ -439,7 +436,7 @@ function VerticalVideos() {
             Operación en movimiento
           </p>
           <h2 className="text-4xl font-black leading-tight md:text-6xl">
-            Historias visuales de la operación.
+            Historias visuales.
           </h2>
         </div>
 
