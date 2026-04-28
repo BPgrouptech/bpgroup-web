@@ -51,8 +51,8 @@ const verticalVideos = [
 ];
 
 const horizontalVideos = [
-  { src: "/media/horizontal2.mp4", title: "Agroindustria" },
-  { src: "/media/horizontal1.mp4", title: "Infraestructura" },
+  { src: "/media/horizontal1.mp4", title: "Agroindustria" },
+  { src: "/media/horizontal2.mp4", title: "Infraestructura" },
 ];
 
 const gallery = [
