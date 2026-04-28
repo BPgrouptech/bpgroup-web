@@ -231,7 +231,7 @@ function Hero() {
         </motion.div>
 
         <h1 className="text-6xl font-black tracking-tight md:text-9xl">
-          Construimos futuro.
+          BP Group
         </h1>
 
         <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/75 md:text-2xl">
