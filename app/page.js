@@ -54,6 +54,7 @@ const verticalVideos = [
   { src: "/media/vertical1.mp4", title: "Campo", text: "Operación agrícola" },
   { src: "/media/vertical2.mp4", title: "Maquinaria", text: "Movimiento y trabajo" },
   { src: "/media/vertical3.mp4", title: "Producción", text: "Crecimiento operativo" },
+  { src: "/media/vertical4.mp4", title: "Expansión", text: "Desarrollo continuo" },
 ];
 
 const horizontalVideos = [
@@ -206,7 +207,7 @@ function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="none"
       />
 
       <div className="absolute inset-0 bg-black/65" />
@@ -580,7 +581,7 @@ function VideoShowcase() {
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="none"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 flex items-center gap-3">
@@ -610,7 +611,7 @@ function VerticalVideos() {
           </h2>
         </div>
 
-        <div className="flex gap-6 overflow-x-auto pb-6">
+        <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
           {verticalVideos.map((item, index) => (
             <motion.div
               key={item.src}
@@ -627,7 +628,7 @@ function VerticalVideos() {
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="none"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
