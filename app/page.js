@@ -21,6 +21,8 @@ import {
   BriefcaseBusiness,
   Layers3,
   Wrench,
+  Sparkles,
+  MessageCircle,
 } from "lucide-react";
 
 const companies = [
@@ -32,11 +34,11 @@ const companies = [
     icon: Leaf,
   },
   {
-    title: "BP Costruye",
+    title: "BP Construye",
     subtitle: "Infraestructura y desarrollo",
-    text: "Área en desarrollo para proyectos de construcción, maquinaria, obras civiles e infraestructura.",
+    text: "Desarrollo de proyectos de construcción, maquinaria, obras civiles e infraestructura estratégica.",
     image: "/media/maquinaria.webp",
-    icon: HardHat, 
+    icon: HardHat,
   },
   {
     title: "Futuros proyectos",
@@ -137,6 +139,7 @@ export default function Home() {
       <VisualStory />
       <Gallery />
       <Contact />
+      <FloatingWhatsApp />
     </main>
   );
 }
@@ -153,10 +156,10 @@ function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-white/10 bg-[#070b12]/85 py-1 shadow-2xl shadow-black/30 backdrop-blur-2xl"
-          : "border-b border-white/5 bg-transparent py-3"
+          ? "border-b border-white/10 bg-[#070b12]/80 py-2 shadow-2xl shadow-black/30 backdrop-blur-2xl"
+          : "border-b border-white/5 bg-transparent py-4"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
@@ -173,13 +176,13 @@ function Header() {
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-white/70 md:flex">
-          <a href="#nosotros" className="hover:text-[#c9a24d] transition">Nosotros</a>
-          <a href="#empresas" className="hover:text-[#c9a24d] transition">Empresas</a>
-          <a href="#videos" className="hover:text-[#c9a24d] transition">Videos</a>
-          <a href="#galeria" className="hover:text-[#c9a24d] transition">Galería</a>
+          <a href="#nosotros" className="transition hover:text-[#c9a24d]">Nosotros</a>
+          <a href="#empresas" className="transition hover:text-[#c9a24d]">Empresas</a>
+          <a href="#videos" className="transition hover:text-[#c9a24d]">Videos</a>
+          <a href="#galeria" className="transition hover:text-[#c9a24d]">Galería</a>
           <a
             href="#contacto"
-            className="rounded-full bg-white px-5 py-2 font-semibold text-black hover:bg-[#c9a24d] transition"
+            className="rounded-full bg-white px-5 py-2 font-semibold text-black transition hover:bg-[#c9a24d]"
           >
             Contacto
           </a>
@@ -192,7 +195,7 @@ function Header() {
 function Hero() {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.25], [1, 1.18]);
-  const opacity = useTransform(scrollYProgress, [0, 0.25], [1, 0.3]);
+  const opacity = useTransform(scrollYProgress, [0, 0.25], [1, 0.25]);
 
   return (
     <section className="relative flex min-h-screen items-center justify-center">
@@ -208,7 +211,7 @@ function Hero() {
       />
 
       <div className="absolute inset-0 bg-black/65" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.18),transparent_42%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,77,0.22),transparent_42%)]" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-[#070b12]/15 to-[#070b12]" />
 
       <motion.div
@@ -217,34 +220,36 @@ function Hero() {
         transition={{ duration: 1 }}
         className="relative z-10 mx-auto max-w-6xl px-6 text-center"
       >
-        <motion.p
-          initial={{ opacity: 0, letterSpacing: "0.1em" }}
-          animate={{ opacity: 1, letterSpacing: "0.4em" }}
-          transition={{ duration: 1.1, delay: 0.2 }}
-          className="mb-5 text-xs uppercase text-[#c9a24d] md:text-sm"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.1 }}
+          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.25em] text-[#c9a24d] backdrop-blur-xl"
         >
+          <Sparkles size={14} />
           Agroindustria · Construcción · Inversión
-        </motion.p>
+        </motion.div>
 
         <h1 className="text-6xl font-black tracking-tight md:text-9xl">
-          BP Group
+          Construimos futuro.
         </h1>
 
         <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/75 md:text-2xl">
-          Un grupo empresarial diseñado para crecer, operar y transformar sectores estratégicos.
+          BP Group integra operación, infraestructura y visión empresarial para
+          desarrollar sectores estratégicos con enfoque a largo plazo.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="#empresas"
-            className="rounded-full bg-[#c9a24d] px-8 py-4 font-bold text-black shadow-xl shadow-[#c9a24d]/20 hover:bg-[#e0bd63] transition"
+            className="rounded-full bg-[#c9a24d] px-8 py-4 font-bold text-black shadow-xl shadow-[#c9a24d]/20 transition hover:scale-105 hover:bg-[#e0bd63]"
           >
             Conocer el grupo
           </a>
 
           <a
             href="#videos"
-            className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-white backdrop-blur-md hover:bg-white/10 transition"
+            className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-white backdrop-blur-md transition hover:scale-105 hover:bg-white/10"
           >
             Ver operación <ArrowRight size={18} />
           </a>
@@ -277,7 +282,7 @@ function Metrics() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12 }}
-              className="rounded-[1.5rem] border border-white/10 bg-black/20 p-7"
+              className="rounded-[1.5rem] border border-white/10 bg-black/20 p-7 transition hover:-translate-y-1 hover:bg-white/[0.05]"
             >
               <Icon className="mb-6 text-[#c9a24d]" />
               <p className="text-5xl font-black">{item.value}</p>
@@ -383,7 +388,7 @@ function Companies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: index * 0.15 }}
-                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 hover:scale-[1.02] hover:border-[#c9a24d]/40 transition-all duration-300"
+                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 transition-all duration-500 hover:-translate-y-2 hover:border-[#c9a24d]/40 hover:shadow-2xl hover:shadow-[#c9a24d]/10"
               >
                 <div className="relative h-80 overflow-hidden">
                   <img
@@ -392,7 +397,6 @@ function Companies() {
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-
 
                   <div className="absolute bottom-5 left-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#c9a24d] text-black">
                     <Icon />
@@ -412,6 +416,7 @@ function Companies() {
     </section>
   );
 }
+
 function Capabilities() {
   return (
     <section className="relative px-6 py-24">
@@ -469,7 +474,7 @@ function Capabilities() {
 
 function GroupStructure() {
   return (
-    <section className="px-6 md:px-10 xl:px-16 py-24">
+    <section className="px-6 py-24 md:px-10 xl:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 max-w-4xl">
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#c9a24d]">
@@ -543,7 +548,7 @@ function VideoShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30 transition-all duration-500 hover:-translate-y-2 hover:border-[#c9a24d]/40 hover:shadow-[#c9a24d]/10"
             >
               <video
                 className="aspect-video w-full object-cover transition duration-700 group-hover:scale-105"
@@ -590,10 +595,10 @@ function VerticalVideos() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12 }}
-              className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30 transition-all duration-500 hover:-translate-y-2 hover:border-[#c9a24d]/40 hover:shadow-[#c9a24d]/10"
             >
               <video
-                className="h-[440px] md:h-[500px] w-full object-cover"
+                className="h-[440px] w-full object-cover transition duration-700 group-hover:scale-105 md:h-[500px]"
                 src={item.src}
                 autoPlay
                 muted
@@ -602,10 +607,8 @@ function VerticalVideos() {
                 preload="none"
               />
 
-              {/* overlay oscuro */}
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
 
-              {/* texto */}
               <div className="absolute bottom-6 left-6 right-6 z-20">
                 <p className="text-sm text-[#c9a24d]">{item.text}</p>
                 <h3 className="mt-1 text-3xl font-black text-white">
@@ -619,6 +622,7 @@ function VerticalVideos() {
     </section>
   );
 }
+
 function VisualStory() {
   return (
     <section className="relative min-h-screen overflow-hidden px-6 py-32">
@@ -690,7 +694,7 @@ function Gallery() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className={`h-80 w-full rounded-[2rem] border border-white/10 object-cover shadow-2xl shadow-black/30 ${
+            className={`h-80 w-full rounded-[2rem] border border-white/10 object-cover shadow-2xl shadow-black/30 transition duration-500 hover:-translate-y-2 hover:border-[#c9a24d]/40 ${
               index === 0 || index === 3 ? "md:col-span-2" : ""
             }`}
           />
@@ -734,7 +738,7 @@ function Contact() {
           <input className="mb-4 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-4 outline-none focus:border-[#c9a24d]" placeholder="Correo" />
           <input className="mb-4 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-4 outline-none focus:border-[#c9a24d]" placeholder="Teléfono" />
           <textarea className="mb-4 h-36 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-4 outline-none focus:border-[#c9a24d]" placeholder="Mensaje" />
-          <button type="button" className="w-full rounded-full bg-[#c9a24d] px-6 py-4 font-bold text-black hover:bg-[#e0bd63] transition">
+          <button type="button" className="w-full rounded-full bg-[#c9a24d] px-6 py-4 font-bold text-black transition hover:bg-[#e0bd63]">
             Enviar mensaje
           </button>
         </form>
@@ -744,5 +748,18 @@ function Contact() {
         © {new Date().getFullYear()} BP Group. Todos los derechos reservados.
       </footer>
     </section>
+  );
+}
+
+function FloatingWhatsApp() {
+  return (
+    <a
+      href="https://wa.me/521XXXXXXXXXX"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-black/40 transition hover:scale-110"
+    >
+      <MessageCircle size={28} />
+    </a>
   );
 }
