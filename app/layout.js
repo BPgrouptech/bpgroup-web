@@ -11,18 +11,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// 🔥 METADATA UNIFICADO (solo uno)
 export const metadata = {
   metadataBase: new URL("https://bpgroup.mx"),
-  title: "BP Group Holding",
-  description: "Desarrollo, Agroindustria e Infraestructura",
 
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
-  },
-};
+  title: "BP Group Holding",
 
   description:
     "Grupo empresarial enfocado en agroindustria, infraestructura, construcción, desarrollo e inversión.",
@@ -71,12 +63,10 @@ export const metadata = {
   },
 
   icons: {
-  icon: [
-    { url: "/media/bp-logo.png", type: "image/png" },
-  ],
-  shortcut: "/media/bp-logo.png",
-  apple: "/media/bp-logo.png",
-},
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
